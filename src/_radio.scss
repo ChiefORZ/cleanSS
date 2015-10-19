@@ -1,0 +1,84 @@
+//====================================================
+//  Checkbox
+//====================================================
+
+input[type=radio] {
+    position: absolute;
+
+    opacity: 0;
+    outline: none;
+}
+
+label input[type=radio] {
+
+    & + span.clean-radio {
+        line-height: 16px;
+
+        position: relative;
+
+        display: inline-block;
+
+        margin: 0 10px 4px 0;
+        padding: 4px;
+
+        user-select: none;
+        vertical-align: middle;
+
+        border-color: $lightgrey;
+        border-style: $border-style;
+        border-width: 2px;
+        border-radius: 8px;
+
+        background: #FFF;
+    }
+
+    & + span.clean-radio::before {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        margin-top: -8px;
+        margin-left: -8px;
+        padding: 8px;
+
+        content: "";
+
+        border-radius: 8px;
+    }
+
+    &:active + span.clean-radio::before,
+    &:focus + span.clean-radio::before {
+        box-shadow: 0 0 0 4px rgba(0,0,0,.15);
+    }
+
+    & + span.clean-radio::after {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        width: 16px;
+        height: 16px;
+        margin-top: -8px;
+        margin-left: -8px;
+
+        content: "";
+
+        transition: transform ease .28s;
+
+        transform: scale(0);
+
+        border-radius: 16px;
+    }
+
+    &:checked + span.clean-radio::after {
+        transform: scale(1);
+        background-color: $accent;
+    }
+
+    @each $name, $color in $colors {
+        &:checked + span.clean-radio.clean-radio--#{$name}::after {
+            background-color: #{$color};
+        }
+    }
+
+}

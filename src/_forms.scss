@@ -1,0 +1,250 @@
+$border-style: solid !default;
+$border-color: $lightgrey !default;
+
+$border-1: 1px !default;
+$border-2: 2px !default;
+$border-3: 3px !default;
+
+$border-radius: 3px !default;
+
+//====================================================
+//  Border Radius
+//====================================================
+
+.rounded     { border-radius: $border-radius; }
+.not-rounded { border-radius: 0; }
+.circle      { border-radius: 50%; }
+
+// ====================================================
+//   Forms
+// ====================================================
+
+input,
+select,
+textarea,
+fieldset {
+    font-family: inherit;
+    font-size: 1em;
+    border: none;
+    border-radius: 0;
+}
+
+label { vertical-align: middle; }
+
+textarea {
+  line-height: 1.75;
+  padding: 0.5em 0.5em;
+  vertical-align: top;
+}
+
+.clean-form {
+
+    position: relative;
+
+    input[type="text"],
+    input[type="password"],
+    input[type="email"],
+    input[type="url"],
+    input[type="date"],
+    input[type="month"],
+    input[type="time"],
+    input[type="datetime"],
+    input[type="datetime-local"],
+    input[type="week"],
+    input[type="number"],
+    input[type="search"],
+    input[type="tel"],
+    input[type="color"],
+    select,
+    textarea {
+        font-size: $base-font-size;
+        height: auto;
+
+        display: inline-block;
+
+        margin: inherit;
+        margin-top: 0.25em;
+        margin-bottom: 0.25em;
+        padding: 0.5em 0.6em;
+
+        border-color: $border-color;
+        border-style: $border-style;
+        border-width: $border-1;
+        border-radius: $border-radius;
+
+        transition: border-color 0.2s;
+
+        box-shadow: inset 0 1px 3px #DDD;
+
+      &:focus {
+        outline: none;
+        border-color: $blue;
+      }
+    }
+
+    input:not([type]) {
+        padding: 0.5em 0.6em;
+        display: inline-block;
+
+        border-color: $border-color;
+        border-style: $border-style;
+        border-width: $border-1;
+        border-radius: $border-radius;
+
+        box-shadow: inset 0 1px 3px #DDD;
+
+        &:focus {
+          outline: none;
+          border-color: $blue;
+        }
+    }
+
+    input[type="text"][disabled],
+    input[type="password"][disabled],
+    input[type="email"][disabled],
+    input[type="url"][disabled],
+    input[type="date"][disabled],
+    input[type="month"][disabled],
+    input[type="time"][disabled],
+    input[type="datetime"][disabled],
+    input[type="datetime-local"][disabled],
+    input[type="week"][disabled],
+    input[type="number"][disabled],
+    input[type="search"][disabled],
+    input[type="tel"][disabled],
+    input[type="color"][disabled],
+    select[disabled],
+    textarea[disabled] {
+        cursor: not-allowed;
+        background-color: $lightsilver;
+        color: $grey;
+        border-color: $silver;
+    }
+
+    input:not([type])[disabled] {
+        cursor: not-allowed;
+        background-color: $lightsilver;
+        color: $grey;
+        border-color: $silver;
+    }
+
+    input[readonly],
+    select[readonly],
+    textarea[readonly] {
+        background-color: $lightsilver; // menu hover bg color
+        color: $grey;
+    }
+
+    input:focus:invalid,
+    textarea:focus:invalid,
+    select:focus:invalid {
+        color: $red;
+        border-color: $red;
+    }
+
+    select {
+        height: 2.25em;
+        border-color: $border-color;
+        border-style: $border-style;
+        border-width: $border-1;
+        background-color: $white;
+    }
+
+    select[multiple] {
+        height: auto;
+    }
+
+    label {
+        margin: 0.5em 0 0.2em;
+    }
+
+    fieldset {
+        margin: 0;
+        padding: 0.35em 0 0.75em;
+        border: 0;
+    }
+
+    // Stacked Forms
+
+    &.clean-form--stacked {
+
+        input[type="text"],
+        input[type="password"],
+        input[type="email"],
+        input[type="url"],
+        input[type="date"],
+        input[type="month"],
+        input[type="time"],
+        input[type="datetime"],
+        input[type="datetime-local"],
+        input[type="week"],
+        input[type="number"],
+        input[type="search"],
+        input[type="tel"],
+        input[type="color"],
+        select,
+        textarea {
+            display: block;
+            margin: 0.25em 0;
+        }
+
+        input:not([type]) {
+            display: block;
+            margin: 0.25em 0;
+        }
+
+    }
+
+    // Aligned Forms
+
+    &.clean-form--aligned {
+        input,
+        textarea,
+        select {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        textarea {
+            vertical-align: top;
+        }
+
+        .clean-form-group {
+            margin-bottom: 0.5em;
+
+            label {
+                text-align: right;
+                display: inline-block;
+                vertical-align: middle;
+                width: 10em;
+                margin: 0 1em 0 0;
+            }
+
+        }
+
+        .clean-form-controls {
+            margin: 1.5em 0 0 11em;
+        }
+
+    }
+
+    input.clean-input-rounded,
+    .clean-input-rounded {
+        border-radius: 2em;
+        padding: 0.5em 1em;
+    }
+    @include max-md {
+        &.clean-form--aligned button[type="submit"] {
+            margin: 0.7em 0 0;
+        }
+        &.clean-form--aligned .clean-form-group label {
+            margin-bottom: 0.3em;
+            text-align: left;
+            display: block;
+            width: 100%;
+        }
+        &.clean-form--aligned .clean-form-controls {
+            margin: 1.5em 0 0 0;
+        }
+    }
+}

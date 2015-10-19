@@ -1,0 +1,83 @@
+//====================================================
+//  Checkbox
+//====================================================
+
+// Label Hack for Android: http://timpietrusky.com/advanced-checkbox-hack
+
+body {
+    -webkit-animation: bugfix infinite 1s;
+}
+
+@-webkit-keyframes bugfix {
+    from {
+        padding: 0;
+    }
+    to {
+        padding: 0;
+    }
+}
+
+input[type=checkbox] {
+    position: absolute;
+    top: 0;
+
+    margin: 2px;
+
+    opacity: 0;
+    outline: none;
+}
+
+input[type=checkbox] + label {
+    user-focus: normal;
+}
+
+label input[type=checkbox] {
+
+    & + span.clean-checkbox {
+        line-height: 16px;
+
+        position: relative;
+
+        display: inline-block;
+
+        width: 16px;
+        height: 16px;
+        margin: 0 5px 4px 0;
+
+        user-select: none;
+        vertical-align: middle;
+
+        border-color: $lightgrey;
+        border-style: $border-style;
+        border-width: 2px;
+
+        background: $white;
+    }
+
+    &:active + span.clean-checkbox,
+    &:focus + span.clean-checkbox {
+        background-color: $silver;
+    }
+
+    &:checked + span.clean-checkbox::after {
+        position: absolute;
+        top: -20%;
+        left: 10%;
+
+        width: 140%;
+        height: 60%;
+
+        content: "";
+        transform: rotate(-45deg);
+
+        border-bottom: 3px solid $accent;
+        border-left: 3px solid $accent;
+    }
+
+    @each $name, $color in $colors {
+        &:checked + span.clean-checkbox.clean-checkbox--#{$name}::after {
+            border-color: #{$color};
+        }
+    }
+
+}

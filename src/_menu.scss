@@ -1,0 +1,127 @@
+$menuitems: 10!default;
+
+//====================================================
+//  Tabbed Menu
+//====================================================
+
+.clean-menu {
+
+    ul.clean-menu-nav,
+    ul.clean-menu-nav li,
+    ul.clean-menu-list,
+    ul.clean-menu-list li {
+        padding: 0;
+    }
+
+    ul.clean-menu-nav {
+        position: relative;
+        user-select: none;
+    }
+
+    ul.clean-menu-nav:before {
+        position: absolute;
+        z-index: -1;
+
+        display: block;
+
+        width: 100%;
+        height: 100%;
+
+        content: "";
+    }
+
+    &.clean-menu--tabbed {
+        @include max-md {
+            // Tabbed Menu Responsive
+            ul.clean-menu-nav:before {
+                bottom: 0;
+                left: 0;
+
+                border-bottom: 2px solid $lightsilver;
+            }
+            ul.clean-menu-nav li {
+                display: inline-block;
+
+                border-bottom: 2px solid transparent;
+            }
+            ul.clean-menu-nav li label {
+                display: block;
+
+                padding: .5em .8em;
+
+                cursor: pointer;
+            }
+            ul.clean-menu-nav li:hover {
+                border-bottom: 2px solid $silver;
+            }
+            ul.clean-menu-nav .icon {
+                display: none;
+            }
+            ul.clean-menu-list > li {
+                padding: 2em;
+            }
+
+            @for $i from 1 through $menuitems {
+                input:nth-of-type(#{$i}):checked ~ ul.clean-menu-nav li:nth-of-type(#{$i}) {
+                    border-bottom: $border-2 $border-style $accent;
+                }
+            }
+
+        }
+
+        @include min-md {
+            // Stacked Menu Normal
+
+            ul.clean-menu-nav:before {
+                top: 0;
+                right: 0;
+
+                border-right: 2px solid $lightsilver;
+            }
+            ul.clean-menu-nav li {
+                display: block;
+
+                width: 100%;
+            }
+            ul.clean-menu-nav li label {
+                display: block;
+
+                padding: 0.8em 0.8em;
+
+                cursor: pointer;
+            }
+            ul.clean-menu-nav li:hover {
+                border-right: 2px solid $silver;
+            }
+            ul.clean-menu-nav .icon {
+                font-size: 2em;
+
+                display: inline-block;
+
+                vertical-align: middle;
+            }
+            ul.clean-menu-list > li {
+                padding: 4em;
+            }
+
+            @for $i from 1 through $menuitems {
+                input:nth-of-type(#{$i}):checked ~ ul.clean-menu-nav li:nth-of-type(#{$i}) {
+                    border-right: $border-2 $border-style $accent;
+                }
+            }
+
+        }
+
+        ul.clean-menu-list > li {
+            display: none;
+        }
+
+        @for $i from 1 through $menuitems {
+            input:nth-of-type(#{$i}):checked ~ ul.clean-menu-list li:nth-of-type(#{$i}) {
+                display: block;
+            }
+        }
+
+    }
+
+}

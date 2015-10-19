@@ -1,0 +1,34 @@
+// ====================================================
+//   Basic Positioning Properties
+// ====================================================
+
+.relative { position: relative; }
+.absolute { position: absolute; }
+.fixed    { position: fixed; }
+
+.center   { margin: 0 auto; }
+
+// ====================================================
+//   Absolute Positioning
+// ====================================================
+
+.top    { top: 0; }
+.right  { right: 0; }
+.bottom { bottom: 0; }
+.left   { left: 0; }
+
+.absolute-center {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto
+}
+
+// ====================================================
+//   Floats
+// ====================================================
+
+.float-left  { float: left; }
+.float-right { float: right; }

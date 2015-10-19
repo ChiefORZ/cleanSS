@@ -1,0 +1,40 @@
+//====================================================
+//  Clean Responsive Grid
+//====================================================
+
+@include min-sm {
+    @each $unit-size in $unit-sizes {
+        @for $i from 1 through $unit-size {
+            .clean-unit-sm-#{$i}-#{$unit-size} {
+                width: 100% * ($i/$unit-size);
+            }
+        }
+    }
+}
+@include min-md {
+    @each $unit-size in $unit-sizes {
+        @for $i from 1 through $unit-size {
+            .clean-unit-md-#{$i}-#{$unit-size} {
+                width: 100% * ($i/$unit-size);
+            }
+        }
+    }
+}
+@include min-lg {
+    @each $unit-size in $unit-sizes {
+        @for $i from 1 through $unit-size {
+            .clean-unit-lg-#{$i}-#{$unit-size} {
+                width: 100% * ($i/$unit-size);
+            }
+        }
+    }
+}
+@include min-xl {
+    @each $unit-size in $unit-sizes {
+        @for $i from 1 through $unit-size {
+            .clean-unit-xl-#{$i}-#{$unit-size} {
+                width: 100% * ($i/$unit-size);
+            }
+        }
+    }
+}

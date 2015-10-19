@@ -1,0 +1,64 @@
+//====================================================
+//  Display
+//====================================================
+
+.hidden       { display: none; }
+.block        { display: block; }
+.flex         { display: flex; }
+.inline       { display: inline; }
+.inline-block { display: inline-block; }
+.inline-flex  { display: inline-flex; }
+
+.overflow-hidden { overflow: hidden; }
+.overflow-scroll { overflow: scroll; }
+.overflow-auto   { overflow: auto; }
+
+.hide-on-sm { @include max-sm { display: none !important; }}
+.hide-on-md { @include max-md { display: none !important; }}
+.hide-on-lg { @include min-md { display: none !important; }}
+.hide-on-xl { @include min-lg { display: none !important; }}
+
+//====================================================
+//  Text wrap
+//====================================================
+
+.pre       { white-space: pre; }
+.nowrap    { white-space: nowrap; }
+
+//====================================================
+//  Scrolling
+//====================================================
+
+.scroll-horizontal {
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+.scroll-vertical {
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+    background: transparent;
+}
+
+//====================================================
+//  Misc.
+//====================================================
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.no-pointer-events {
+    pointer-events: none;
+}
+
+.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+}

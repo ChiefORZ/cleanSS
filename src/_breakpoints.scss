@@ -1,0 +1,84 @@
+// ≥ 568px
+$sm-break:   35.5em !default;
+// ≥ 768px
+$md-break:   48em !default;
+// ≥ 1024px
+$lg-break:   64em !default;
+// ≥ 1280px
+$xl-break:   80em !default;
+// site width
+$site-width: 74em!default;
+
+@mixin min-sm() {
+    @media screen and (min-width: $sm-break) {
+        @content;
+    }
+}
+
+@mixin min-md() {
+    @media screen and (min-width: $md-break) {
+        @content;
+    }
+}
+
+@mixin min-lg() {
+    @media screen and (min-width: $lg-break) {
+        @content;
+    }
+}
+
+@mixin min-xl() {
+    @media screen and (min-width: $xl-break) {
+        @content;
+    }
+}
+
+
+
+@mixin max-sm() {
+    @media screen and (max-width: $sm-break) {
+        @content;
+    }
+}
+
+@mixin max-md() {
+    @media screen and (max-width: $md-break) {
+        @content;
+    }
+}
+
+@mixin max-lg() {
+    @media screen and (max-width: $lg-break) {
+        @content;
+    }
+}
+
+@mixin max-xl() {
+    @media screen and (max-width: $xl-break) {
+        @content;
+    }
+}
+
+//====================================================
+//  Blocks
+//====================================================
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+}
+
+.container {
+    position: relative;
+
+    max-width: $site-width;
+    margin: 0 auto;
+    padding: 2em;
+
+    &.edge {
+        max-width: none;
+        padding: 2em 0;
+    }
+
+}

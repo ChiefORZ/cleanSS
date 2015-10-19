@@ -1,0 +1,79 @@
+$blue:        #0082D5!default;
+$green:       #04BE5B!default;
+$olive:       #9DBF16!default;
+$orange:      #FF9948!default;
+$red:         #D2335C!default;
+$purple:      #A93ABA!default;
+
+$white:       #FFFFFF!default;
+$lightsilver: #ECEFF4!default;
+$silver:      #CAD3DF!default;
+$lightgrey:   #ADB9CA!default;
+$grey:        #8493A8!default;
+$midgrey:     #54657E!default;
+$darkgrey:    #3D4D65!default;
+$black:       #375355!default;
+$trueblack:   #000000!default;
+
+$facebook:    #3b5998!default;
+$google:      #d34837!default;
+$twitter:     #00aced!default;
+
+$transparent: transparent!default;
+
+$accent: $blue!default;
+
+$colors: (
+    blue:        $blue,
+    green:       $green,
+    olive:       $olive,
+    orange:      $orange,
+    red:         $red,
+    purple:      $purple,
+
+    white:       $white,
+    lightsilver: $lightsilver,
+    silver:      $silver,
+    lightgrey:   $lightgrey,
+    grey:        $grey,
+    midgrey:     $midgrey,
+    darkgrey:    $darkgrey,
+    black:       $black,
+    trueblack:   $trueblack,
+
+    facebook:    $facebook,
+    google:      $google,
+    twitter:     $twitter,
+
+    transparent: $transparent
+);
+
+//====================================================
+//  Text Colors
+//====================================================
+
+@each $name, $color in $colors {
+    .font-#{$name} {
+        color: $color;
+    }
+}
+
+//====================================================
+//  Background Colors
+//====================================================
+
+@each $name, $color in $colors {
+    .bg-#{$name} {
+        color: $color;
+    }
+}
+
+//====================================================
+//  Border Colors
+//====================================================
+
+@each $name, $color in $colors {
+    .border-#{$name} {
+        color: $color;
+    }
+}
