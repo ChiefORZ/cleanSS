@@ -5,7 +5,6 @@ var postcss      = require('gulp-postcss');
 var autoprefixer = require('autoprefixer');
 var minifyCSS    = require('gulp-minify-css');
 
-
 gulp.task('sass', function () {
     var processors = [
         autoprefixer({browsers: ['last 30 versions', 'ie 9']})
@@ -26,3 +25,32 @@ gulp.task('default',['sass'],  function() {
 gulp.task('watch', function () {
     gulp.watch('./src/**/*.scss', ['default']);
 });
+
+
+// Font Tasks
+
+var cssfont64 = require('gulp-cssfont64');
+var del = require('del');
+var concat    = require('gulp-concat');
+
+// Take all fonts from the ./fonts/ folder and generate a temporary folder with all base64 css
+gulp.task('base64convert', function () {
+    return gulp.src(['./fonts/*.woff', './fonts/*.ttf'])
+        .pipe(cssfont64())
+        .pipe(gulp.dest('./fonts/temp'));
+});
+
+// Concatenate all the CSS Files in the temporary folder and move it to the src folder
+gulp.task('base64concat',['base64convert'], function () {
+    return gulp.src('./fonts/temp/*.css')
+        .pipe(concat('_fonts.scss'))
+        .pipe(gulp.dest('src'));
+});
+
+// after all of it is done, remove the temporary folder!
+gulp.task('base64css',['base64concat'], function () {
+    del('./fonts/temp').then(function (paths) {
+        console.log('Deleted files/folders:\n', paths.join('\n'));
+    });
+});
+
