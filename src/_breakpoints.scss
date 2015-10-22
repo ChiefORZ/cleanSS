@@ -1,11 +1,11 @@
 // ≥ 568px
-$sm-break:   35.5em !default;
+$sm-break: 35.5em !default;
 // ≥ 768px
-$md-break:   48em !default;
+$md-break: 48em !default;
 // ≥ 1024px
-$lg-break:   64em !default;
+$lg-break: 64em !default;
 // ≥ 1280px
-$xl-break:   80em !default;
+$xl-break: 80em !default;
 // site width
 $site-width: 74em!default;
 
@@ -75,10 +75,8 @@ $site-width: 74em!default;
     max-width: $site-width;
     margin: 0 auto;
     padding: 2em;
-
-    &.edge {
+    &.container--edge {
         max-width: none;
         padding: 2em 0;
     }
-
 }

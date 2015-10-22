@@ -1,38 +1,61 @@
 //====================================================
+//  Icon Lists
+//====================================================
+
+ul.clean-icon-list {
+    list-style: none;
+    padding-left: 0;
+
+    li {
+        padding: .5em 0 .5em 1em;
+    }
+    [class^="icon-"], [class*=" icon-"] {
+        margin-left: -1em;
+        padding: 0 1em;
+    }
+
+}
+
+//====================================================
 //  Blockquote
 //====================================================
 
 blockquote {
     font-style: italic;
-    padding: 0.5em 1em;
-    margin: 0 0 1em;
-    border-left: 5px solid $lightsilver;
 
+    margin: 0 0 1em;
+    padding: .5em 1em;
+
+    border-left: 5px solid $lightsilver;
     & small {
         font-style: normal;
-
         &:before {
-            content: '\2014 \00A0';
+            content: "\2014 \00A0";
         }
-
     }
-
+    ol:last-child,
+    p:last-child,
+    ul:last-child {
+        margin-bottom: 0;
+    }
 }
 
 //====================================================
 //  Pricing Tags
 //====================================================
 
-.price {
+.clean-price {
     font-size: 2em;
     font-weight: 300;
-}
-.price span {
-    font-size: .6em;
 
-    margin: 0 2px;
+    span {
+        font-size: .6em;
 
-    vertical-align: top;
+        margin: 0 2px;
+
+        vertical-align: top;
+    }
+
 }
 
 //====================================================
@@ -40,33 +63,31 @@ blockquote {
 //====================================================
 
 .clean-rating {
-    text-align:center;
-    direction: rtl;
-
     user-select: none;
+    text-align: center;
 
+    direction: rtl;
     & label:before {
+        font-size: 1.5em;
+        line-height: 1em;
+
         width: 1em;
         height: 1em;
-        line-height: 1em;
-        font-size: 1.5em;
 
-        content: '\2606';
+        content: "\2606";
     }
-
     & input[type="radio"]:checked ~ label:before {
-        content: '\2605';
+        content: "\2605";
+
         color: $orange;
     }
-
     & label:hover:before,
     & label:hover ~ label:before {
-        content: '\2605';
+        content: "\2605";
         cursor: pointer;
     }
-
     & label:active {
-        position:relative;
+        position: relative;
         top: 1px;
     }
 }

@@ -9,14 +9,12 @@ table.clean-table {
     empty-cells: show;
     border-spacing: 0;
     border-collapse: collapse;
-
     thead {
         text-align: left;
         vertical-align: bottom;
 
         border-bottom: $border-2 $border-style $border-color;
     }
-
     th,
     td {
         font-size: inherit;
@@ -28,31 +26,25 @@ table.clean-table {
 
         border-bottom: $border-1 $border-style $border-color;
     }
-
     tr:last-of-type td {
         border-bottom: none;
     }
-
     // Striped Tables
     &.clean-table--striped tr:nth-child(2n) td {
         background-color: $lightsilver;
     }
-
     // Bordered Tables
     &.clean-table--bordered {
         border: $border-1 $border-style $border-color;
-
         & th,
         & td {
             border: $border-1 $border-style $border-color;
         }
-
     }
     // Hover rows
     &.clean-table--hover tbody tr:hover {
         background-color: $lightsilver;
     }
-
 }
 
 .responsive-table {

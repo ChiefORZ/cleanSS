@@ -1,25 +1,27 @@
 // Import Order
 
+// base
 @import "_variables";
 @import "_normalize";
 @import "_breakpoints";
 @import "_utilities";
 @import "_images";
-@import "_whitespace";
 @import "_grid";
 @import "_grid.responsive";
+@import "_fonts";
 @import "_colors";
+@import "_typography";
+@import "_whitespace";
 @import "_positioning";
 @import "_depth";
-@import "_fonts";
-@import "_typography";
+// components
 @import "_forms";
 @import "_tables";
 @import "_checkbox";
 @import "_radio";
 @import "_buttons";
 @import "_misc";
-@import "_tooltip";
 @import "_alert";
+@import "_tooltip";
 @import "_menu";
 @import "_icons";

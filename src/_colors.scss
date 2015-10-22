@@ -5,23 +5,23 @@ $orange:      #FF9948!default;
 $red:         #D2335C!default;
 $purple:      #A93ABA!default;
 
-$white:       #FFFFFF!default;
+$white:       #FFF!default;
 $lightsilver: #ECEFF4!default;
 $silver:      #CAD3DF!default;
 $lightgrey:   #ADB9CA!default;
 $grey:        #8493A8!default;
 $midgrey:     #54657E!default;
 $darkgrey:    #3D4D65!default;
-$black:       #375355!default;
-$trueblack:   #000000!default;
+$black:       #374355!default;
+$trueblack:   #000!default;
 
-$facebook:    #3b5998!default;
-$google:      #d34837!default;
-$twitter:     #00aced!default;
+$facebook:    #3B5998!default;
+$google:      #D34837!default;
+$twitter:     #00ACED!default;
 
 $transparent: transparent!default;
 
-$accent: $blue!default;
+$accent:      $blue!default;
 
 $colors: (
     blue:        $blue,
@@ -64,7 +64,7 @@ $colors: (
 
 @each $name, $color in $colors {
     .bg-#{$name} {
-        color: $color;
+        background-color: $color;
     }
 }
 
@@ -74,6 +74,6 @@ $colors: (
 
 @each $name, $color in $colors {
     .border-#{$name} {
-        color: $color;
+        border-color: $color;
     }
 }

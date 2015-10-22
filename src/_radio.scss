@@ -10,7 +10,6 @@ input[type=radio] {
 }
 
 label input[type=radio] {
-
     & + span.clean-radio {
         line-height: 16px;
 
@@ -24,14 +23,12 @@ label input[type=radio] {
         user-select: none;
         vertical-align: middle;
 
-        border-color: $lightgrey;
-        border-style: $border-style;
         border-width: 2px;
+        border-style: $border-style;
+        border-color: $lightgrey;
         border-radius: 8px;
-
-        background: #FFF;
+        background: $white;
     }
-
     & + span.clean-radio::before {
         position: absolute;
         top: 50%;
@@ -45,12 +42,10 @@ label input[type=radio] {
 
         border-radius: 8px;
     }
-
     &:active + span.clean-radio::before,
     &:focus + span.clean-radio::before {
         box-shadow: 0 0 0 4px rgba(0,0,0,.15);
     }
-
     & + span.clean-radio::after {
         position: absolute;
         top: 50%;
@@ -62,23 +57,19 @@ label input[type=radio] {
         margin-left: -8px;
 
         content: "";
-
         transition: transform ease .28s;
-
         transform: scale(0);
 
         border-radius: 16px;
     }
-
     &:checked + span.clean-radio::after {
         transform: scale(1);
+
         background-color: $accent;
     }
-
     @each $name, $color in $colors {
         &:checked + span.clean-radio.clean-radio--#{$name}::after {
             background-color: #{$color};
         }
     }
-
 }

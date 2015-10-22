@@ -14,80 +14,80 @@
 
     cursor: pointer;
     user-select: none;
+    transition: all linear .2s;
     text-align: center;
     vertical-align: middle;
     white-space: nowrap;
     text-decoration: none;
 
-    border-color: $accent;
-    border-style: $border-style;
+    color: $accent;
     border-width: $border-1;
-
+    border-style: $border-style;
+    border-color: $accent;
     border-radius: 6px;
     background: 0;
 
     user-focus: normal;
-
-    transition: all linear .2s;
-
     &.clean-button--primary {
         color: $white;
-
         background-color: $accent;
     }
-
     &.clean-button--pill {
         border-radius: 24px;
     }
-
+    &.clean-button--xs {
+        font-size: 70%;
+    }
+    &.clean-button--sm {
+        font-size: 85%;
+    }
+    &.clean-button--lg {
+        font-size: 110%;
+    }
+    &.clean-button--xl {
+        font-size: 125%;
+    }
     &:focus {
         outline: 0;
         outline: -webkit-focus-ring-color none;
     }
-
     &:hover,
     &:focus {
         text-decoration: none;
 
+        opacity: .8;
         color: $white;
         border-color: $accent;
         background-color: $accent;
-
-        opacity: 0.8;
     }
-
     &:active {
         transform: translateY(1px);
 
         color: $white;
         border-color: $accent;
         background-color: $accent;
-
-        box-shadow: inset 0 1px 0px rgba(0,0,0,0.2);
+        box-shadow: inset 0 1px 0 rgba(0,0,0,.2);
     }
-
     &[disabled] {
         cursor: not-allowed;
-        opacity: 0.4;
+
+        opacity: .4;
     }
 
     @each $name, $color in $colors {
         &.clean-button--#{$name} {
-            border-color: #{$color};
             color: #{$color};
+            border-color: #{$color};
         }
-
         &.clean-button--#{$name}.clean-button--primary {
             color: $white;
-
             background-color: #{$color};
         }
-
         &.clean-button--#{$name}:hover,
         &.clean-button--#{$name}:focus {
-            background-color: #{$color};
-            color: $white;
+            @extend .clean-button.clean-button--#{$name}.clean-button--primary;
         }
     }
 
 }
+

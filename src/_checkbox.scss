@@ -32,7 +32,6 @@ input[type=checkbox] + label {
 }
 
 label input[type=checkbox] {
-
     & + span.clean-checkbox {
         line-height: 16px;
 
@@ -47,18 +46,15 @@ label input[type=checkbox] {
         user-select: none;
         vertical-align: middle;
 
-        border-color: $lightgrey;
-        border-style: $border-style;
         border-width: 2px;
-
+        border-style: $border-style;
+        border-color: $lightgrey;
         background: $white;
     }
-
     &:active + span.clean-checkbox,
     &:focus + span.clean-checkbox {
         background-color: $silver;
     }
-
     &:checked + span.clean-checkbox::after {
         position: absolute;
         top: -20%;
@@ -73,11 +69,9 @@ label input[type=checkbox] {
         border-bottom: 3px solid $accent;
         border-left: 3px solid $accent;
     }
-
     @each $name, $color in $colors {
         &:checked + span.clean-checkbox.clean-checkbox--#{$name}::after {
             border-color: #{$color};
         }
     }
-
 }

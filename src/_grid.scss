@@ -1,4 +1,4 @@
-$unit-sizes : 1, 2, 4, 5, 12;
+$unit-sizes: 1, 2, 3, 4, 5, 12;
 
 //====================================================
 //  Clean Grid
@@ -34,8 +34,9 @@ $unit-sizes : 1, 2, 4, 5, 12;
 @each $unit-size in $unit-sizes {
     @for $i from 1 through $unit-size {
         .clean-unit-#{$i}-#{$unit-size} {
-            @extend .clean-unit;
             width: 100% * ($i/$unit-size);
+
+            @extend .clean-unit;
         }
     }
 }

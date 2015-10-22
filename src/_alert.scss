@@ -28,40 +28,32 @@
         color: $green;
         border-color: $green;
         background-color: lighten($green, 55%);
-
         &:before {
             content: "\e824";
         }
-
     }
     &.clean-alert--info {
         color: $blue;
         border-color: $blue;
         background-color: lighten($blue, 50%);
-
         &:before {
             content: "\e822";
         }
-
     }
     &.clean-alert--warning {
         color: $orange;
         border-color: $orange;
         background-color: lighten($orange, 35%);
-
         &:before {
             content: "\e821";
         }
-
     }
     &.clean-alert--danger {
         color: $red;
         border-color: $red;
         background-color: lighten($red, 40%);
-
         &:before {
             content: "\e823";
         }
-
     }
 }
