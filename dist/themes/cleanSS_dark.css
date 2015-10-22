@@ -1,0 +1,134 @@
+body {
+  color: #ADB9CA;
+  background-color: #3D4D65; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #FFF; }
+
+hr {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
+
+.clean-alert p {
+  color: #FFF; }
+
+.clean-alert.clean-alert--success {
+  background-color: #355E64; }
+
+.clean-alert.clean-alert--info {
+  background-color: #345576; }
+
+.clean-alert.clean-alert--warning {
+  background-color: #5A5861; }
+
+.clean-alert.clean-alert--danger {
+  background-color: #534964; }
+
+label input[type=checkbox] + span.clean-checkbox {
+  border-color: #ADB9CA;
+  background: #374355; }
+
+label input[type=checkbox]:active + span.clean-checkbox,
+label input[type=checkbox]:focus + span.clean-checkbox {
+  background-color: #3D4D65; }
+
+.clean-form input[type="text"],
+.clean-form input[type="password"],
+.clean-form input[type="email"],
+.clean-form input[type="url"],
+.clean-form input[type="date"],
+.clean-form input[type="month"],
+.clean-form input[type="time"],
+.clean-form input[type="datetime"],
+.clean-form input[type="datetime-local"],
+.clean-form input[type="week"],
+.clean-form input[type="number"],
+.clean-form input[type="search"],
+.clean-form input[type="tel"],
+.clean-form input[type="color"],
+.clean-form select,
+.clean-form textarea {
+  background-color: #374355;
+  -webkit-box-shadow: none;
+          box-shadow: none; }
+  .clean-form input[type="text"]:focus,
+  .clean-form input[type="password"]:focus,
+  .clean-form input[type="email"]:focus,
+  .clean-form input[type="url"]:focus,
+  .clean-form input[type="date"]:focus,
+  .clean-form input[type="month"]:focus,
+  .clean-form input[type="time"]:focus,
+  .clean-form input[type="datetime"]:focus,
+  .clean-form input[type="datetime-local"]:focus,
+  .clean-form input[type="week"]:focus,
+  .clean-form input[type="number"]:focus,
+  .clean-form input[type="search"]:focus,
+  .clean-form input[type="tel"]:focus,
+  .clean-form input[type="color"]:focus,
+  .clean-form select:focus,
+  .clean-form textarea:focus {
+    background-color: #3D4D65; }
+  .clean-form input[type="text"][disabled],
+  .clean-form input[type="password"][disabled],
+  .clean-form input[type="email"][disabled],
+  .clean-form input[type="url"][disabled],
+  .clean-form input[type="date"][disabled],
+  .clean-form input[type="month"][disabled],
+  .clean-form input[type="time"][disabled],
+  .clean-form input[type="datetime"][disabled],
+  .clean-form input[type="datetime-local"][disabled],
+  .clean-form input[type="week"][disabled],
+  .clean-form input[type="number"][disabled],
+  .clean-form input[type="search"][disabled],
+  .clean-form input[type="tel"][disabled],
+  .clean-form input[type="color"][disabled],
+  .clean-form select[disabled],
+  .clean-form textarea[disabled] {
+    color: #54657E;
+    border-color: #54657E;
+    background-color: #374355; }
+
+.clean-menu.clean-menu--vertical ul.clean-menu-nav:before,
+.clean-menu.clean-menu--horizontal ul.clean-menu-nav:before,
+.clean-menu.clean-menu--responsive ul.clean-menu-nav:before {
+  border-color: #54657E; }
+
+.clean-menu.clean-menu--vertical ul.clean-menu-nav li:hover,
+.clean-menu.clean-menu--horizontal ul.clean-menu-nav li:hover,
+.clean-menu.clean-menu--responsive ul.clean-menu-nav li:hover {
+  border-color: #8493A8; }
+
+blockquote {
+  border-color: #54657E; }
+
+label input[type=radio] + span.clean-radio {
+  background: #374355; }
+
+table.clean-table.clean-table--striped tr:nth-child(2n) td {
+  background-color: #54657E; }
+
+table.clean-table.clean-table--hover tbody tr:hover {
+  background-color: #54657E; }
+
+.tooltip:after,
+[data-tooltip]:after {
+  color: #3D4D65;
+  background: #CAD3DF; }
+
+.tooltip--top:before {
+  border-top-color: #CAD3DF; }
+
+.tooltip--bottom:before {
+  border-bottom-color: #CAD3DF; }
+
+.tooltip--right:before {
+  border-right-color: #CAD3DF; }
+
+.tooltip--left:before {
+  border-left-color: #CAD3DF; }
+
+/*# sourceMappingURL=cleanSS_dark.css.map */
