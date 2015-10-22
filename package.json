@@ -19,6 +19,7 @@
     "gulp-postcss": "^6.0.1",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.0.4",
+    "gulp-sourcemaps": "^1.6.0",
     "node-sass": "^3.3.3",
     "promise": "^7.0.4"
   }

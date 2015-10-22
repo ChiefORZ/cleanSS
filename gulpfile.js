@@ -4,14 +4,17 @@ var sass         = require('gulp-sass');
 var postcss      = require('gulp-postcss');
 var autoprefixer = require('autoprefixer');
 var minifyCSS    = require('gulp-minify-css');
+var sourcemaps   = require('gulp-sourcemaps');
 
 gulp.task('sass', function () {
     var processors = [
         autoprefixer({browsers: ['last 30 versions', 'ie 9']})
     ];
     return gulp.src('./src/**/*.scss')
-        .pipe(sass().on('error', sass.logError))
-        .pipe(postcss(processors))
+        .pipe(sourcemaps.init())
+          .pipe(sass().on('error', sass.logError))
+          .pipe(postcss(processors))
+        .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest('./dist'));
 });
 
