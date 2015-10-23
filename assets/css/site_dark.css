@@ -1,0 +1,253 @@
+/* cleanSS Dark Theme */
+
+body.dark-theme {
+  color: #ADB9CA;
+  background-color: #3D4D65; }
+
+.dark-theme h1,
+.dark-theme h2,
+.dark-theme h3,
+.dark-theme h4,
+.dark-theme h5,
+.dark-theme h6 {
+  color: #FFF; }
+
+.dark-theme hr {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
+
+.dark-theme .clean-alert p {
+  color: #FFF; }
+
+.dark-theme .clean-alert.clean-alert--success {
+  background-color: #355E64; }
+
+.dark-theme .clean-alert.clean-alert--info {
+  background-color: #345576; }
+
+.dark-theme .clean-alert.clean-alert--warning {
+  background-color: #5A5861; }
+
+.dark-theme .clean-alert.clean-alert--danger {
+  background-color: #534964; }
+
+.dark-theme label input[type=checkbox] + span.clean-checkbox {
+  border-color: #ADB9CA;
+  background: #374355; }
+
+.dark-theme label input[type=checkbox]:active + span.clean-checkbox,
+.dark-theme label input[type=checkbox]:focus + span.clean-checkbox {
+  background-color: #3D4D65; }
+
+.dark-theme .clean-form input[type="text"],
+.dark-theme .clean-form input[type="password"],
+.dark-theme .clean-form input[type="email"],
+.dark-theme .clean-form input[type="url"],
+.dark-theme .clean-form input[type="date"],
+.dark-theme .clean-form input[type="month"],
+.dark-theme .clean-form input[type="time"],
+.dark-theme .clean-form input[type="datetime"],
+.dark-theme .clean-form input[type="datetime-local"],
+.dark-theme .clean-form input[type="week"],
+.dark-theme .clean-form input[type="number"],
+.dark-theme .clean-form input[type="search"],
+.dark-theme .clean-form input[type="tel"],
+.dark-theme .clean-form input[type="color"],
+.dark-theme .clean-form select,
+.dark-theme .clean-form textarea {
+  background-color: #374355;
+  -webkit-box-shadow: none;
+          box-shadow: none; }
+  .dark-theme .clean-form input[type="text"]:focus,
+  .dark-theme .clean-form input[type="password"]:focus,
+  .dark-theme .clean-form input[type="email"]:focus,
+  .dark-theme .clean-form input[type="url"]:focus,
+  .dark-theme .clean-form input[type="date"]:focus,
+  .dark-theme .clean-form input[type="month"]:focus,
+  .dark-theme .clean-form input[type="time"]:focus,
+  .dark-theme .clean-form input[type="datetime"]:focus,
+  .dark-theme .clean-form input[type="datetime-local"]:focus,
+  .dark-theme .clean-form input[type="week"]:focus,
+  .dark-theme .clean-form input[type="number"]:focus,
+  .dark-theme .clean-form input[type="search"]:focus,
+  .dark-theme .clean-form input[type="tel"]:focus,
+  .dark-theme .clean-form input[type="color"]:focus,
+  .dark-theme .clean-form select:focus,
+  .dark-theme .clean-form textarea:focus {
+    background-color: #3D4D65; }
+  .dark-theme .clean-form input[type="text"][disabled],
+  .dark-theme .clean-form input[type="password"][disabled],
+  .dark-theme .clean-form input[type="email"][disabled],
+  .dark-theme .clean-form input[type="url"][disabled],
+  .dark-theme .clean-form input[type="date"][disabled],
+  .dark-theme .clean-form input[type="month"][disabled],
+  .dark-theme .clean-form input[type="time"][disabled],
+  .dark-theme .clean-form input[type="datetime"][disabled],
+  .dark-theme .clean-form input[type="datetime-local"][disabled],
+  .dark-theme .clean-form input[type="week"][disabled],
+  .dark-theme .clean-form input[type="number"][disabled],
+  .dark-theme .clean-form input[type="search"][disabled],
+  .dark-theme .clean-form input[type="tel"][disabled],
+  .dark-theme .clean-form input[type="color"][disabled],
+  .dark-theme .clean-form select[disabled],
+  .dark-theme .clean-form textarea[disabled] {
+    color: #54657E;
+    border-color: #54657E;
+    background-color: #374355; }
+
+.dark-theme .clean-menu.clean-menu--vertical ul.clean-menu-nav:before,
+.dark-theme .clean-menu.clean-menu--horizontal ul.clean-menu-nav:before,
+.dark-theme .clean-menu.clean-menu--responsive ul.clean-menu-nav:before {
+  border-color: #54657E; }
+
+.dark-theme ul.clean-menu-nav li:hover {
+  border-color: #8493A8; }
+
+.dark-theme blockquote {
+  border-color: #54657E; }
+
+.dark-theme label input[type=radio] + span.clean-radio {
+  background: #374355; }
+
+.dark-theme table.clean-table.clean-table--striped tr:nth-child(2n) td {
+  background-color: #54657E; }
+
+.dark-theme table.clean-table.clean-table--hover tbody tr:hover {
+  background-color: #54657E; }
+
+.dark-theme .tooltip:after,
+.dark-theme [data-tooltip]:after {
+  color: #3D4D65;
+  background: #CAD3DF; }
+
+.dark-theme .tooltip--top:before {
+  border-top-color: #CAD3DF; }
+
+.dark-theme .tooltip--bottom:before {
+  border-bottom-color: #CAD3DF; }
+
+.dark-theme .tooltip--right:before {
+  border-right-color: #CAD3DF; }
+
+.dark-theme .tooltip--left:before {
+  border-left-color: #CAD3DF; }
+
+/* Site Specific Dark Theme */
+.dark-theme #sidebar {
+    background-color: #3D4D65;
+}
+.dark-theme #sidebar .clean-menu-nav a {
+    color: #ADB9CA;
+}
+.dark-theme #sidebar #toggle-theme {
+    border-right: 2px solid #54657E
+}
+.dark-theme #sidebar #toggle-theme:hover,
+.dark-theme #sidebar #toggle-theme:focus {
+    border-right: 2px solid #8493A8;
+}
+.dark-theme .clean-grid-preview-bar-active {
+    background-color: #54657E;
+}
+.dark-theme .clean-headings-preview {
+    border: 1px solid rgba(255,255,255,.2);
+}
+
+/* Predawn Syntax Highlighting */
+/* http://jamiewilson.io/predawn/ */
+
+.dark-theme pre[class*="language-"] {
+  padding: 1em;
+  margin: 0.5em 0; }
+
+.dark-theme code[class*="language-"],
+.dark-theme pre[class*="language-"] {
+  position: relative;
+  color: #EDE480;
+  background: #3D4D65; }
+
+.dark-theme code[class*="language-"],
+.dark-theme pre[class*="language-"] {
+  background: #374355; }
+
+
+.dark-theme code[class*="language-"].language-markup,
+.dark-theme pre[class*="language-"].language-markup,
+.dark-theme code[class*="language-"].language-javascript,
+.dark-theme pre[class*="language-"].language-javascript {
+  color: #FFF; }
+
+  .dark-theme .token.comment,
+.dark-theme .token.prolog,
+.dark-theme .token.doctype,
+.dark-theme .token.cdata,
+.dark-theme .token.entity,
+.dark-theme .language-css .token.string,
+.dark-theme .language-scss .token.string,
+.dark-theme .style .token.string {
+color: #8493A8; }
+
+.dark-theme .token.property,
+.dark-theme .language-markup .token.punctuation {
+  color: #92BFBF; }
+
+.dark-theme .token.tag,
+.dark-theme .token.boolean,
+.dark-theme .token.number,
+.dark-theme .token.constant,
+.dark-theme .token.symbol,
+.dark-theme .token.deleted,
+.dark-theme .language-css .token.selector,
+.dark-theme .language-scss .token.selector {
+  color: #B4D388; }
+
+  .dark-theme .token.selector,
+.dark-theme .token.attr-name,
+.dark-theme .token.string,
+.dark-theme .token.char,
+.dark-theme .token.builtin,
+.dark-theme .token.inserted,
+.dark-theme .language-clike .token.boolean,
+.dark-theme .language-javascript .token.keyword,
+.dark-theme .language-javascript .token.number {
+  color: #EDE480; }
+
+.dark-theme .token.punctuation {
+  color: #CAD3DF; }
+
+.dark-theme .token.attr-value,
+.dark-theme .token.keyword,
+.dark-theme .language-clike .token.string,
+.dark-theme .language-javascript .token.string {
+  color: #BDDCDC; }
+
+.dark-theme .token.operator,
+.dark-theme .token.atrule,
+.dark-theme .token.function,
+.dark-theme .token.url,
+.dark-theme .language-css .token.keyword,
+.dark-theme .language-scss .token.keyword,
+.dark-theme .token.regex,
+.dark-theme .token.variable {
+  color: #F49D62; }
+
+.dark-theme .token.important {
+  color: #CF5340; }
+
+.dark-theme .token.entity {
+  cursor: help; }
+
+.dark-theme pre[class*='language-'][data-language]::before {
+  content: attr(data-language);
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 4px 8px;
+  font-size: 10px;
+  background: #CAD3DF;
+  color: #3D4D65;
+  text-transform: uppercase;
+  -webkit-border-radius: 0 0 0 5px;
+          border-radius: 0 0 0 5px; }
+
+.dark-theme .no-indicator:before {
+  display: none; }
