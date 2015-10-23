@@ -52,32 +52,37 @@
 #sidebar #toggle-theme {
     display: block;
 
-    text-align: center;
-    vertical-align: center;
-
     width: 100%;
     padding: .5em;
 
-    background-color: #3D4D65;
-    color: #FFF;
+    text-align: center;
+    vertical-align: center;
 
+    color: #FFF;
     border-right: 2px solid #ECEFF4;
+    background-color: #3D4D65;
 }
 #sidebar #toggle-theme:hover,
 #sidebar #toggle-theme:focus {
     text-decoration: none;
+
     border-right: 2px solid #CAD3DF;
 }
 #sidebar #toggle-theme span.svg {
     position: relative;
+
+    display: inline-block;
+
     width: 19px;
     height: 19px;
-    display: inline-block;
+
     vertical-align: middle;
 }
 #sidebar #toggle-theme svg {
     position: absolute;
+
     height: 100%;
+
     fill: #FFF;
 }
 
@@ -115,6 +120,9 @@
 @media screen and (min-width: 48em) {
     .wrapper {
         padding-left: 300px;
+    }
+    .clean-menu-test-responsive img {
+        width: 50%;
     }
 }
 code {
