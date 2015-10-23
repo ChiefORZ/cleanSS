@@ -10,6 +10,7 @@
     display: inline-block;
     zoom: 1;
 
+    margin: .25em 0;
     padding: .5em 1em;
 
     cursor: pointer;
@@ -73,7 +74,6 @@
 
         opacity: .4;
     }
-
     @each $name, $color in $colors {
         &.clean-button--#{$name} {
             color: #{$color};
@@ -88,6 +88,4 @@
             @extend .clean-button.clean-button--#{$name}.clean-button--primary;
         }
     }
-
 }
-

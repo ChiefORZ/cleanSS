@@ -50,23 +50,6 @@ textarea {
 
 .clean-form {
     position: relative;
-
-    @include max-md {
-        &.clean-form--aligned button[type="submit"] {
-            margin: .7em 0 0;
-        }
-        &.clean-form--aligned .clean-form-group label {
-            display: block;
-
-            width: 100%;
-            margin-bottom: .3em;
-
-            text-align: left;
-        }
-        &.clean-form--aligned .clean-form-controls {
-            margin: 1.5em 0 0 0;
-        }
-    }
     input[type="text"],
     input[type="password"],
     input[type="email"],
@@ -127,7 +110,6 @@ textarea {
             outline: none;
         }
     }
-
     input:not([type])[disabled] {
         cursor: not-allowed;
 
@@ -139,7 +121,7 @@ textarea {
     select[readonly],
     textarea[readonly] {
         color: $grey;
-        background-color: $lightsilver; // menu hover bg color
+        background-color: $lightsilver;
     }
     input:focus:invalid,
     textarea:focus:invalid,
@@ -158,14 +140,16 @@ textarea {
     select[multiple] {
         height: auto;
     }
-    label {
-        margin: .5em 0 .2em;
-    }
     fieldset {
         margin: 0;
         padding: .35em 0 .75em;
 
         border: 0;
+    }
+    .clean-form-group label {
+        display: inline-block;
+
+        margin: .5em 0 .2em;
     }
     // Stacked Forms
     &.clean-form--stacked {
@@ -202,26 +186,40 @@ textarea {
         select {
             display: inline-block;
 
+            margin: .25em 0;
+
             vertical-align: middle;
         }
         textarea {
             vertical-align: top;
         }
         .clean-form-group {
-            margin-bottom: .5em;
             label {
-                display: inline-block;
+                display: block;
 
-                width: 10em;
-                margin: 0 1em 0 0;
-
-                text-align: right;
-                vertical-align: middle;
+                width: 100%;
             }
         }
-        .clean-form-controls {
-            margin: 1em 0 0 11em;
+        @include min-md {
+            .clean-form-group {
+                margin-bottom: .5em;
+                label {
+                    display: inline-block;
+
+                    width: 10em;
+                    margin: 0 1em 0 0;
+
+                    text-align: right;
+                    vertical-align: middle;
+                }
+            }
+            .clean-form-controls {
+                margin: .5em 0 0 11em;
+            }
         }
+    }
+    .clean-form-controls {
+        margin: .5em 0 0 0;
     }
     input.clean-input--rounded,
     .clean-input--rounded {

@@ -1421,16 +1421,6 @@ textarea {
 
 .clean-form {
   position: relative; }
-  @media screen and (max-width: 48em) {
-    .clean-form.clean-form--aligned button[type="submit"] {
-      margin: .7em 0 0; }
-    .clean-form.clean-form--aligned .clean-form-group label {
-      display: block;
-      width: 100%;
-      margin-bottom: .3em;
-      text-align: left; }
-    .clean-form.clean-form--aligned .clean-form-controls {
-      margin: 1.5em 0 0 0; } }
   .clean-form input[type="text"],
   .clean-form input[type="password"],
   .clean-form input[type="email"],
@@ -1539,12 +1529,13 @@ textarea {
     background-color: #FFF; }
   .clean-form select[multiple] {
     height: auto; }
-  .clean-form label {
-    margin: 0.5em 0 0.2em; }
   .clean-form fieldset {
     margin: 0;
     padding: 0.35em 0 0.75em;
     border: 0; }
+  .clean-form .clean-form-group label {
+    display: inline-block;
+    margin: 0.5em 0 0.2em; }
   .clean-form.clean-form--stacked input[type="text"],
   .clean-form.clean-form--stacked input[type="password"],
   .clean-form.clean-form--stacked input[type="email"],
@@ -1570,19 +1561,26 @@ textarea {
   .clean-form.clean-form--aligned textarea,
   .clean-form.clean-form--aligned select {
     display: inline-block;
+    margin: .25em 0;
     vertical-align: middle; }
   .clean-form.clean-form--aligned textarea {
     vertical-align: top; }
-  .clean-form.clean-form--aligned .clean-form-group {
-    margin-bottom: .5em; }
-    .clean-form.clean-form--aligned .clean-form-group label {
-      display: inline-block;
-      width: 10em;
-      margin: 0 1em 0 0;
-      text-align: right;
-      vertical-align: middle; }
-  .clean-form.clean-form--aligned .clean-form-controls {
-    margin: 1em 0 0 11em; }
+  .clean-form.clean-form--aligned .clean-form-group label {
+    display: block;
+    width: 100%; }
+  @media screen and (min-width: 48em) {
+    .clean-form.clean-form--aligned .clean-form-group {
+      margin-bottom: .5em; }
+      .clean-form.clean-form--aligned .clean-form-group label {
+        display: inline-block;
+        width: 10em;
+        margin: 0 1em 0 0;
+        text-align: right;
+        vertical-align: middle; }
+    .clean-form.clean-form--aligned .clean-form-controls {
+      margin: 0.5em 0 0 11em; } }
+  .clean-form .clean-form-controls {
+    margin: .5em 0 0 0; }
   .clean-form input.clean-input--rounded,
   .clean-form .clean-input--rounded {
     padding: 0.5em 1em;
@@ -1878,6 +1876,7 @@ label input[type=radio]:checked + span.clean-radio.clean-radio--transparent::aft
   line-height: 1em;
   display: inline-block;
   zoom: 1;
+  margin: .25em 0;
   padding: 0.5em 1em;
   cursor: pointer;
   -webkit-user-select: none;
