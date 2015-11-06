@@ -101,6 +101,10 @@ li ol {
 }
 ul {
     list-style-type: disc;
+    margin-bottom: 1em;
+}
+li ul {
+    list-style-type: circle;
 }
 ol {
     list-style-type: decimal;

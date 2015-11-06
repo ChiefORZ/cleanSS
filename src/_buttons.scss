@@ -81,7 +81,11 @@
         }
         &.clean-button--#{$name}.clean-button--primary {
             color: $white;
-            background-color: #{$color};
+            @if $name == white {
+                background-color: rgba(255, 255, 255, 0.2);
+            } @else {
+                background-color: #{$color};
+            }
         }
         &.clean-button--#{$name}:hover,
         &.clean-button--#{$name}:focus {

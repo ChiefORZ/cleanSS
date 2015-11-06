@@ -910,7 +910,11 @@ li ol {
   margin: 0 1em; }
 
 ul {
-  list-style-type: disc; }
+  list-style-type: disc;
+  margin-bottom: 1em; }
+
+li ul {
+  list-style-type: circle; }
 
 ol {
   list-style-type: decimal; }
@@ -1985,7 +1989,7 @@ label input[type=radio]:checked + span.clean-radio.clean-radio--transparent::aft
   .clean-button.clean-button--white.clean-button--primary, .clean-button.clean-button--white:hover,
   .clean-button.clean-button--white:focus {
     color: #FFF;
-    background-color: #FFF; }
+    background-color: rgba(255, 255, 255, 0.2); }
   .clean-button.clean-button--lightsilver {
     color: #ECEFF4;
     border-color: #ECEFF4; }
