@@ -133,30 +133,15 @@ section {
 }
 .hero {
     background: rgba(0,130,213,1);
-    background:    -moz-linear-gradient(-45deg, rgba(0,130,213,1) 0%, rgba(162,52,213,1) 100%);
-    background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(0,130,213,1)), color-stop(100%, rgba(162,52,213,1)));
-    background: -webkit-linear-gradient(-45deg, rgba(0,130,213,1) 0%, rgba(162,52,213,1) 100%);
-    background:      -o-linear-gradient(-45deg, rgba(0,130,213,1) 0%, rgba(162,52,213,1) 100%);
-    background:     -ms-linear-gradient(-45deg, rgba(0,130,213,1) 0%, rgba(162,52,213,1) 100%);
-    background:         linear-gradient(135deg, rgba(0,130,213,1) 0%, rgba(162,52,213,1) 100%);
-
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0082d5', endColorstr='#a234d5', GradientType=1 );
+    background: #0082D5;
 }
-section.hero h1 {
-    font: 700 4em "Grand Hotel", cursive;
-
-    width: 100%;
-    margin: 0;
-
-    text-align: center;
-
-    color: #FFF;
-    text-shadow: 0 -1px 3px rgba(0,0,0,.2),0 -1px 0 rgba(0,0,0,.3),0 1px 0 rgba(152,184,42,.15),0 1px 4px rgba(152,184,42,.2);
+section.hero h1 img{
+    max-width: 200px;
 }
-section.hero h1 a {
-    text-decoration: none;
-
-    color: #FFF;
+@media screen and (min-width: 35.5em) {
+    section.hero {
+        padding: 3em;
+    }
 }
 section.hero .tagline {
     font-size: 2em;
