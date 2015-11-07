@@ -92,14 +92,10 @@ label input[type=checkbox]:focus + span.clean-checkbox {
     border-color: #54657E;
     background-color: #374355; }
 
-.clean-menu.clean-menu--vertical ul.clean-menu-nav:before,
-.clean-menu.clean-menu--horizontal ul.clean-menu-nav:before,
-.clean-menu.clean-menu--responsive ul.clean-menu-nav:before {
+.clean-menu.clean-menu--vertical ul.clean-menu-nav:before, .clean-menu.clean-menu--horizontal ul.clean-menu-nav:before, .clean-menu.clean-menu--responsive ul.clean-menu-nav:before {
   border-color: #54657E; }
 
-.clean-menu.clean-menu--vertical ul.clean-menu-nav li:hover,
-.clean-menu.clean-menu--horizontal ul.clean-menu-nav li:hover,
-.clean-menu.clean-menu--responsive ul.clean-menu-nav li:hover {
+.clean-menu.clean-menu--vertical ul.clean-menu-nav li:hover, .clean-menu.clean-menu--horizontal ul.clean-menu-nav li:hover, .clean-menu.clean-menu--responsive ul.clean-menu-nav li:hover {
   border-color: #8493A8; }
 
 blockquote {
