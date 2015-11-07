@@ -149,6 +149,14 @@ section.hero .tagline {
 
     color: #FFF;;
 }
+.examples-unit {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    border-radius: 6px;
+    border: 1px solid #eee;
+    height: 300px;
+}
 .clean-grid-preview {
     margin: .5em 0;
 }
