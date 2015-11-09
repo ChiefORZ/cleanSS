@@ -202,9 +202,10 @@
 │   └── cleanSS.min.css
 ├── fonts/
 │   ├── cleanSS.woff
-│   ├── Roboto-normal-400.woff
-│   ├── Roboto-normal-500.woff
-│   └── Roboto-normal-700.woff
+│   ├── Roboto-Bold.ttf
+│   ├── Roboto-Light.ttf
+│   ├── Roboto-Medium.ttf
+│   └── Roboto-Regular.ttf
 └── src/</code>
                 </pre>
                 <p>All files from the <code>dist/</code> folder are precompiled for quick drop-in usage in web projects. It includes a compiled CSS file (<code>cleanSS.css</code>) including CSS <a href="https://developer.chrome.com/devtools/docs/css-preprocessors">source maps</a> (<code>cleanSS.css.map</code>) for development, as well as a compiled and minified CSS file (<code>cleanSS.min.css</code>) for production.</p>
@@ -225,6 +226,8 @@
                 <p>Include custom components or exclude components - that does not fit your needs - from the Sass file <code>src/cleanSS.scss</code>.</p>
                 <p>Most of cleanSS’s variables are bundled in the file <code>src/_variables.scss</code>. By uncommenting and changing those, the defaults gets overwritten.</p>
                 <p>If you would like to include a individual Font - cleanSS comes with an Task that converts every TTF or WOFF Font within the <code>fonts/</code> folder to an Base64 Font. Just place or replace the Fonts to your needs and run the <code>$ gulp base64css</code> command - the source <code>src/_fonts.scss</code> gets compiled automatically.</p>
+                <blockquote>In case multiple Fonts are from the same Font Family, name them according to their rules:<br/>
+                Roboto-Light gets <code>font-weight: 300;</code><br/>Roboto-Light-Italic gets <code>font-weight: 300; font-style: italic;</code></blockquote>
             </div>
         </section>
         <section id="template">
