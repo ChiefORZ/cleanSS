@@ -31,8 +31,8 @@ gulp.task('watch', function () {
 
 
 // Font Tasks
+var cssfont64 = require('gulp-simplefont64');
 
-var cssfont64 = require('gulp-cssfont64');
 var del = require('del');
 var concat    = require('gulp-concat');
 
