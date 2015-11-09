@@ -23,6 +23,10 @@ gulp.task('default',['sass'],  function() {
         .pipe(minifyCSS())
         .pipe(rename('cleanSS.min.css'))
         .pipe(gulp.dest('./dist'));
+    gulp.src('./dist/cleanSS-fonts.css')
+        .pipe(minifyCSS())
+        .pipe(rename('cleanSS-fonts.min.css'))
+        .pipe(gulp.dest('./dist'));
 });
 
 gulp.task('watch', function () {
