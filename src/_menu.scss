@@ -71,7 +71,7 @@ $menuitems: 10!default;
         }
         @for $i from 1 through $menuitems {
             input:nth-of-type(#{$i}):checked ~ ul.clean-menu-nav li:nth-of-type(#{$i}) {
-                @extend .clean-menu-vertical--active;
+                border-right: $border-2 $border-style $accent;
             }
         }
     }
@@ -114,7 +114,7 @@ $menuitems: 10!default;
         }
         @for $i from 1 through $menuitems {
             input:nth-of-type(#{$i}):checked ~ ul.clean-menu-nav li:nth-of-type(#{$i}) {
-                @extend .clean-menu-horizontal--active;
+                border-bottom: $border-2 $border-style $accent;
             }
         }
     }
@@ -212,7 +212,7 @@ $menuitems: 10!default;
     }
     @for $i from 1 through $menuitems {
         input:nth-of-type(#{$i}):checked ~ ul.clean-menu-list li:nth-of-type(#{$i}) {
-            @extend .clean-menu-list--active;
+            display: block;
         }
     }
 }

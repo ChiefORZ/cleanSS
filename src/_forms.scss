@@ -125,7 +125,10 @@ textarea {
     }
     input:focus:invalid,
     textarea:focus:invalid,
-    select:focus:invalid {
+    select:focus:invalid,
+    input.error,
+    textarea.error,
+    select.error {
         color: $red;
         border-color: $red;
     }
